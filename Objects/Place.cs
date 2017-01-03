@@ -25,7 +25,7 @@ namespace PlacesVisited.Objects
       _city = newCity;
     }
 
-    public List<Place> GetAll()
+    public static List<Place> GetAll()
     {
       return _places;
     }
@@ -33,6 +33,16 @@ namespace PlacesVisited.Objects
     public void ClearAll()
     {
       _places.Clear();
+    }
+
+    public int GetId()
+    {
+      return _id;
+    }
+
+    public static Place Find(int searchId)
+    {
+      return _places[searchId - 1];
     }
   }
 }

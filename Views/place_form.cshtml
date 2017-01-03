@@ -1,7 +1,11 @@
 <h1>Places Visited</h1>
 <h3>Add a new place:</h3>
 <form action="/places" method="post">
-  <label for="new-place">Place Description</label>
+  <label for="place-name">Place name</label>
+  <input id="place-name" name="place-name" type="text">
+  <label for="new-place">City name</label>
   <input id="new-place" name="new-place" type="text">
+  <label for="duration">Number of days</label>
+  <input id="duration" name="duration" type="number">
   <button type="submit">Add place</button>
-</form>  
+</form>

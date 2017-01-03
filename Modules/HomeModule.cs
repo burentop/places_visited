@@ -20,7 +20,7 @@ namespace PlacesVisited
       };
 
       Post["/places"] = _ => {
-        Place newPlace = new Place(Request.Form["new-place"]);
+        Place newPlace = new Place(Request.Form["place-name"], Request.Form["new-place"], int.Parse(Request.Form["duration"]));
         List<Place> allPlaces = Place.GetAll();
         return View["places.cshtml", allPlaces];
       };
